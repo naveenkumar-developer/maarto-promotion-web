@@ -1,0 +1,24 @@
+import EarningsCard from "./Component/EarningsCard";
+import Footer from "./Component/footer";
+import Header from "./Component/header";
+import HeroSection from "./Component/hero";
+import HighLights from "./Component/highlights";
+import Testimonials from "./Component/Testimonials";
+import UserGuide from "./Component/userGuide";
+import WhyChooseUs from "./Component/whyChooseUs";
+import PageRoutes from "./Pages/PageRoutes";
+import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./Component/ScrollToTop";
+
+const App = () =>{
+  return (
+    <>
+    <ScrollToTop />
+    <Header />
+    <PageRoutes />
+    <Footer />
+    </>
+  )
+}
+
+export default App;
