@@ -44,15 +44,17 @@ const FeatureCTA = () => {
 
             {/* Button */}
 
-            <motion.button
-
+<motion.a
+  href="https://seller.maarto.com/seller/signin"
+  target="_blank"
+  rel="noopener noreferrer"
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.96 }}
   className="mt-8 bg-white text-orange-500 font-semibold rounded-full px-8 py-3 text-sm md:text-base inline-flex items-center gap-3 shadow-xl"
 >
   Create Supplier Account
   <FaArrowRight />
-</motion.button>
+</motion.a>
 
           </div>
 

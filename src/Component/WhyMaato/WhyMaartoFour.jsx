@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import img1 from "../../assets/images/WhyCard01.jpg";
-import img2 from "../../assets/images/WhyCard02.jpg";
-import img3 from "../../assets/images/WhyCard03.jpg";
+import img1 from "../../assets/images/WhyCard01.jpeg";
+import img2 from "../../assets/images/WhyCard02.jpeg";
+import img3 from "../../assets/images/WhyCard03.jpeg";
 
 
 const suppliers = [

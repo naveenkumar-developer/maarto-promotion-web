@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 // import heroImage from "../assets/hero.png";
-import WhyHeroImage from "../../assets/images/WhyHeroImage.jpg"
+import WhyHeroImage from "../../assets/images/WhyHeroImage.jpeg"
 const stats = [
   {
     icon: <FaPercent />,
@@ -100,28 +100,24 @@ export default function WhyMaartoHero() {
 
           {/* RIGHT */}
 
-          <motion.div
-            initial={{ opacity: 0, x: 70 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: .8 }}
-            viewport={{ once: true }}
-
-            animate={{
-              y: [0, -10, 0],
-            }}
-
-            style={{
-              animationDuration: "4s",
-            }}
-          >
-<img src={WhyHeroImage} />
-<img
-  src="../assets/images/WhyHeroImage.jpg"
-  alt=""
-  className="rounded-2xl shadow-2xl w-full object-cover"
-/>
-
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, x: 70 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  animate={{
+    y: [0, -10, 0],
+  }}
+>
+  <img
+    src={WhyHeroImage}
+    alt="Why Choose Maarto"
+    className="w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover"
+    style={{
+      animation: "float 4s ease-in-out infinite",
+    }}
+  />
+</motion.div>
 
         </div>
 

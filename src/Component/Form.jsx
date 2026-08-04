@@ -109,81 +109,80 @@ try {
   return (
     <section className="bg-gray-100 md:py-10">
       <div className="w-full max-w-280 mx-auto px-4 md:px-8 py-8 md:py-5">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-8 items-stretch">
           {/* Left Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+<motion.div
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="flex flex-col h-full"
+>
             <h2 className="text-xl font-bold text-gray-900">
               Get In Touch
             </h2>
 
             <div className="w-16 h-1 bg-orange-500 mt-3 mb-10 rounded"></div>
 
-            <div className="space-y-8">
+<div className="space-y-5 flex-1">
+  {/* Phone */}
+<div className="flex items-start gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition min-h-[120px]">    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-500">
+      <Phone className="text-white" size={20} />
+    </div>
 
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
-                  <Phone className="text-white" size={20}/>
-                </div>
+    <div>
+      <h3 className="font-semibold text-gray-900">Phone</h3>
 
-                <div>
-                  <h3 className="font-bold text-sm">Phone</h3>
-                  <p className="text-xs">9042473737</p>
-                  <span className="text-gray-500 text-xs">
-                    Weekly available
-                  </span>
-                </div>
-              </div>
+      <a
+        href="tel:8309620291"
+        className="text-orange-500 font-medium hover:underline"
+      >
+        +91 83096 20291
+      </a>
 
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
-                  <Mail className="text-white" size={20}/>
-                </div>
+      <p className="text-sm text-gray-500 mt-1">
+        Monday - Saturday • 9:00 AM - 6:00 PM
+      </p>
+    </div>
+  </div>
 
-                <div>
-                  <h3 className="font-bold text-sm">Email</h3>
-                  <p className="text-xs">support@company.com</p>
-                  <span className="text-gray-500 text-xs">
-                    We reply within 24 hours
-                  </span>
-                </div>
-              </div>
+  {/* Email */}
+<div className="flex items-start gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition min-h-[120px]">    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-500">
+      <Mail className="text-white" size={20} />
+    </div>
 
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
-                  <MapPin className="text-white" size={20}/>
-                </div>
+    <div>
+      <h3 className="font-semibold text-gray-900">Email</h3>
 
-                <div>
-                  <h3 className="font-bold text-sm">Address</h3>
-                  <p className="text-xs">
-                    292-1/D,<br />
-                    Coimbatore, Tamil Nadu
-                  </p>
-                </div>
-              </div>
+      <a
+        href="mailto:maarto.com@gmail.com"
+        className="text-orange-500 font-medium hover:underline break-all"
+      >
+        maarto.com@gmail.com
+      </a>
 
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
-                  <Clock className="text-white" size={20}/>
-                </div>
+      <p className="text-sm text-gray-500 mt-1">
+        We usually respond within 24 hours.
+      </p>
+    </div>
+  </div>
 
-                <div>
-                  <h3 className="font-bold text-sm">
-                    Working Hours
-                  </h3>
+  {/* Address */}
+<div className="flex items-start gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition min-h-[120px]">    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-500">
+      <MapPin className="text-white" size={20} />
+    </div>
 
-                  <p className="text-xs">Mon - Sat : 8AM - 8PM</p>
-                  <span className="text-gray-500 text-xs">
-                    Sunday : Closed
-                  </span>
-                </div>
-              </div>
+    <div>
+      <h3 className="font-semibold text-gray-900">Office Address</h3>
 
-            </div>
+      <p className="text-gray-600 leading-7 text-sm mt-1">
+        18-1/28/3, Adarsh Nagar,<br />
+        Road No. 1, Peerzadiguda,<br />
+        Hyderabad - 500039,<br />
+        Telangana, India
+      </p>
+    </div>
+  </div>
+</div>
           </motion.div>
 
           {/* Right Side */}
@@ -192,7 +191,7 @@ try {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg p-5"
+            className="bg-white rounded-2xl shadow-lg p-6 h-full flex flex-col"
           >
             <h2 className="text-xl font-bold">
               Send Us A Message
@@ -203,7 +202,7 @@ try {
               as soon as possible.
             </p>
 
-<form onSubmit={handleSubmit} className="space-y-2">
+<form onSubmit={handleSubmit}  className="space-y-5 flex-1 flex flex-col">
 
   <div className="grid md:grid-cols-2 gap-3">
 
@@ -318,7 +317,7 @@ try {
       </p>
     )}
   </div>
-
+<div className="pt-2 mt-auto">
   <button
     type="submit"
     className="text-sm w-full bg-orange-500 transition text-white py-4 rounded-lg flex items-center justify-center gap-2 font-semibold"
@@ -326,7 +325,7 @@ try {
     Send Message
     <Send size={18} />
   </button>
-
+</div>
 </form>
 {/* Success Message */}
 {showSuccess && (
