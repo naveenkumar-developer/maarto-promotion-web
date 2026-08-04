@@ -120,15 +120,10 @@ const isActive = (path) => {
         </button>
       </div>
 
-      {open && (
+      {/* {open && (
         <div className="md:hidden px-6 pb-6 bg-white border-t space-y-5">
 
-          {/* <ul className="flex flex-col gap-4 text-gray-700 font-medium pt-4">
-            <li>Start Selling</li>
-            <li>How It Works</li>
-            <li>Pricing</li>
-            <li>Support</li>
-          </ul> */}
+
 
           <div className="flex flex-col gap-3 my-2">
             <button
@@ -146,7 +141,110 @@ const isActive = (path) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
+
+      {open && (
+  <div className="md:hidden bg-white border-t shadow-lg" style={{ borderColor: Theme.primary }}>
+    <ul className="flex flex-col py-3">
+      <li
+        onClick={() => {
+          navigate("/");
+          setOpen(false);
+        }}
+        className={`px-6 py-3 cursor-pointer transition ${
+          isActive("/")
+            ? "text-orange-500 bg-orange-50 font-semibold"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+      >
+        Home
+      </li>
+
+      <li
+        onClick={() => {
+          navigate("/WhyMaarto");
+          setOpen(false);
+        }}
+        className={`px-6 py-3 cursor-pointer transition ${
+          isActive("/WhyMaarto")
+            ? "text-orange-500 bg-orange-50 font-semibold"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+      >
+        Why Maarto?
+      </li>
+
+      <li
+        onClick={() => {
+          navigate("/howItWorks");
+          setOpen(false);
+        }}
+        className={`px-6 py-3 cursor-pointer transition ${
+          isActive("/howItWorks")
+            ? "text-orange-500 bg-orange-50 font-semibold"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+      >
+        How It Works
+      </li>
+
+      <li
+        onClick={() => {
+          navigate("/Feature");
+          setOpen(false);
+        }}
+        className={`px-6 py-3 cursor-pointer transition ${
+          isActive("/Feature")
+            ? "text-orange-500 bg-orange-50 font-semibold"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+      >
+        Features
+      </li>
+
+      <li
+        onClick={() => {
+          navigate("/ContactUs");
+          setOpen(false);
+        }}
+        className={`px-6 py-3 cursor-pointer transition ${
+          isActive("/ContactUs")
+            ? "text-orange-500 bg-orange-50 font-semibold"
+            : "text-gray-700 hover:bg-gray-50"
+        }`}
+      >
+        Contact Us
+      </li>
+    </ul>
+
+    <div className="px-6 pb-6 pt-2 space-y-3 border-t" style={{ borderColor: Theme.primary }}>
+      <button
+        onClick={() =>
+          window.open(
+            "https://seller.maarto.com/seller/signin",
+            "_blank"
+          )
+        }
+        className="w-full py-3 rounded-lg border border-gray-300 font-medium"
+      >
+        Sign In
+      </button>
+
+      <button
+        onClick={() =>
+          window.open(
+            "https://seller.maarto.com/seller/signin",
+            "_blank"
+          )
+        }
+        style={{ backgroundColor: Theme.primary }}
+        className="w-full py-3 rounded-lg text-white font-semibold shadow-md"
+      >
+        Start Selling Today
+      </button>
+    </div>
+  </div>
+)}
     </header>
   );
 };

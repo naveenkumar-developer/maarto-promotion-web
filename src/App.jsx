@@ -9,6 +9,7 @@ import WhyChooseUs from "./Component/whyChooseUs";
 import PageRoutes from "./Pages/PageRoutes";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./Component/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 
 const App = () =>{
   return (
@@ -17,6 +18,17 @@ const App = () =>{
     <Header />
     <PageRoutes />
     <Footer />
+
+          <ToastContainer
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </>
   )
 }

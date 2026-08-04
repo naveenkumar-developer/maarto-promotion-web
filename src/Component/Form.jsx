@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import API_CONFIG from "../helper/Api_config";
 import axios from "axios";
-
+import {toast} from "react-toastify";
 
 const ContactForm = () => {
 const [errors, setErrors] = useState({});
@@ -25,12 +25,8 @@ const [form, setForm]= useState({
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-console.log("Form Data:", form); // Log the form data to the console
 
-  // const name = e.target.name.value.trim();
-  // const email = e.target.email.value.trim();
-  // const phone = e.target.phone.value.trim().replace(/\D/g, ""); // Remove non-digit characters
-  // const message = e.target.message.value.trim();
+
 
   let newErrors = {};
 
@@ -61,15 +57,14 @@ console.log("Form Data:", form); // Log the form data to the console
   setErrors(newErrors);
 
   if (Object.keys(newErrors).length > 0) return;
-console.log("Adjbsiu");
-  setShowSuccess(true);
+
 e.target.reset();
 setErrors({});
 
   e.target.reset();
   setErrors({});
 
-  // Api call to send the form data to the backend
+
 try {
   const response = await axios.post(
     API_CONFIG.ENQUIRY_SEND,
@@ -85,15 +80,13 @@ try {
       },
     }
   );
-
-  if (response.data.success) {
+  if (response.data.status) {
     setShowSuccess(true);
     e.target.reset();
     setErrors({});
   }
-
 } catch (error) {
-  console.error(error);
+  toast.error( error?.response?.data?.message || "Failed to send message. Please try again later.")
 }finally {
   setForm({
     name: "",
@@ -140,7 +133,7 @@ try {
       </a>
 
       <p className="text-sm text-gray-500 mt-1">
-        Monday - Saturday • 9:00 AM - 6:00 PM
+        Monday - Saturday 
       </p>
     </div>
   </div>
@@ -157,7 +150,7 @@ try {
         href="mailto:maarto.com@gmail.com"
         className="text-orange-500 font-medium hover:underline break-all"
       >
-        maarto.com@gmail.com
+        contact@maarto.com
       </a>
 
       <p className="text-sm text-gray-500 mt-1">
@@ -174,12 +167,13 @@ try {
     <div>
       <h3 className="font-semibold text-gray-900">Office Address</h3>
 
-      <p className="text-gray-600 leading-7 text-sm mt-1">
-        18-1/28/3, Adarsh Nagar,<br />
-        Road No. 1, Peerzadiguda,<br />
-        Hyderabad - 500039,<br />
-        Telangana, India
-      </p>
+<p className="text-gray-600 leading-7 text-sm mt-1">
+  Plot No. 145, 2nd Floor,<br />
+  Phase - 3, Banjara Hills,<br />
+  Road No. 2,<br />
+  Hyderabad - 500034,<br />
+  Telangana, India
+</p>
     </div>
   </div>
 </div>
