@@ -126,7 +126,7 @@ try {
       <h3 className="font-semibold text-gray-900">Phone</h3>
 
       <a
-        href="tel:8309620291"
+        href="tel:9477808080"
         className="text-orange-500 font-medium hover:underline"
       >
         +91 83096 20291

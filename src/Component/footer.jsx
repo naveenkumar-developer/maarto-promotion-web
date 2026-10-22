@@ -84,7 +84,7 @@ const Footer = () => {
     Email: <a href="mailto:contact@maarto.com" className="hover:underline">contact@maarto.com</a>
   </li>
   <li className="hover:text-white">
-    Phone: <a href="tel:8309620291" className="hover:underline">8309620291</a>
+    Phone: <a href="tel:9477808080" className="hover:underline">9477808080</a>
   </li>
 </ul>
         </div>
